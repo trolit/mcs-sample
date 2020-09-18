@@ -31,3 +31,23 @@ def get_biggest_even_sum(list_numbers, var_size):
             var_starting_pos += 1
         else:
             break
+    print('For: [', elements_of_list(list_numbers), ']')
+    print('selected:', elements_of_list(list_chosen_numbers))
+    print('which gives: ', var_biggest_even_sum)
+
+
+def elements_of_list(user_list):
+    var_list_elements = ''
+    var_i = 0
+    for list_item in user_list:
+        if var_i == 0:
+            var_list_elements += str(list_item)
+        else:
+            var_list_elements += ' ' + str(list_item)
+        var_i += 1
+    return var_list_elements
+
+
+get_biggest_even_sum([1, 2, 9, 3, 6, 6, 7, 7, 3], 4)
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
