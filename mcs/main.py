@@ -1,10 +1,11 @@
-# This is sample in Python for
-# Most Common (Even/Uneven) Sum of given list
+# This is sample in Python language for
+# MCS - Most Common (Even/Uneven) Sum
+# for given list, size and mode
 # created by https://github.com/trolit
 
 # Press Shift+F10 to execute it.
 
-# mode => even/uneven
+# expected mode => even/uneven
 def get_biggest_sum_depending_on_mode(list_numbers, var_size, var_mode):
     # Use a breakpoint in the code line below to debug your script.
     list_numbers_length = len(list_numbers)
@@ -48,6 +49,9 @@ def get_biggest_sum_depending_on_mode(list_numbers, var_size, var_mode):
         else:
             break
         if var_starting_pos >= list_numbers_length:
+            print('For: [', return_elements_of_list(list_numbers), ']')
+            print(f'var_starting_pos reached unexpected position {var_starting_pos}')
+            print()
             break
 
 
@@ -69,4 +73,6 @@ get_biggest_sum_depending_on_mode([102, 15, 33, 4, 81, 2, 13, 6, 79], 4, 'even')
 get_biggest_sum_depending_on_mode([4, 32, 15, 1, 6, 2, 8, 6, 9], 3, 'uneven')
 get_biggest_sum_depending_on_mode([0, 0, 3, 2, 0, 5, 2, 7, 6], 7, 'uneven')
 get_biggest_sum_depending_on_mode([3, 32, 5], 3, 'uneven')
+get_biggest_sum_depending_on_mode([3, 32, 5], 2, 'uneven')
 get_biggest_sum_depending_on_mode([1, 1, 1, 2, 3], 3, 'uneven')
+get_biggest_sum_depending_on_mode([6, 0, 0, 4, 3], 5, 'even')
