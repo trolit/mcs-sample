@@ -20,14 +20,14 @@ def get_biggest_sum_depending_on_mode(list_numbers, var_size, var_mode):
         var_index = var_starting_pos
         var_current_sum = 0
         var_number_counter = 0
-        while var_number_counter < var_size - 1:
+        while var_number_counter < var_size - 1 and var_index < list_numbers_length:
             var_current_sum += list_numbers[var_index]
             list_chosen_numbers.append(list_numbers[var_index])
             var_index += 1
             var_number_counter += 1
         if var_number_counter + 1 != var_size:
             print('For: [', return_elements_of_list(list_numbers), ']')
-            print(f'Couldn\'t find {var_size} numbers ({var_mode} mode)')
+            print(f'Couldn\'t find {var_size} numbers for mode: {var_mode}')
             print()
             break
         while var_index < list_numbers_length:
@@ -64,9 +64,9 @@ def return_elements_of_list(user_list):
 
 
 # Examples
-# get_biggest_sum_depending_on_mode([1, 2, 9, 3, 6, 6, 7, 7, 3], 4, 'even')
-# get_biggest_sum_depending_on_mode([102, 15, 33, 4, 81, 2, 13, 6, 79], 4, 'even')
-# get_biggest_sum_depending_on_mode([4, 32, 15, 1, 6, 2, 8, 6, 9], 3, 'uneven')
-# get_biggest_sum_depending_on_mode([0, 0, 3, 2, 0, 5, 2, 7, 6], 7, 'uneven')
-# get_biggest_sum_depending_on_mode([3, 32, 5], 3, 'uneven')
+get_biggest_sum_depending_on_mode([1, 2, 9, 3, 6, 6, 7, 7, 3], 4, 'even')
+get_biggest_sum_depending_on_mode([102, 15, 33, 4, 81, 2, 13, 6, 79], 4, 'even')
+get_biggest_sum_depending_on_mode([4, 32, 15, 1, 6, 2, 8, 6, 9], 3, 'uneven')
+get_biggest_sum_depending_on_mode([0, 0, 3, 2, 0, 5, 2, 7, 6], 7, 'uneven')
+get_biggest_sum_depending_on_mode([3, 32, 5], 3, 'uneven')
 get_biggest_sum_depending_on_mode([1, 1, 1, 2, 3], 3, 'uneven')
