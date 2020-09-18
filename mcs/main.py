@@ -47,15 +47,15 @@ def get_biggest_sum_depending_on_mode(list_numbers, var_size, var_mode):
                 break
             var_index += 1
 
-        if not var_is_sum_found:
-            var_starting_pos += 1
-        elif var_is_sum_found:
-            break
-
         if var_starting_pos >= list_numbers_length:
             print('For: [', return_elements_of_list(list_numbers), ']')
             print(f'var_starting_pos reached unexpected position {var_starting_pos}')
             print()
+            break
+
+        if not var_is_sum_found:
+            var_starting_pos += 1
+        elif var_is_sum_found:
             break
 
 
